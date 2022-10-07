@@ -1,10 +1,14 @@
 // Need to initialise the employee object first using the key:value syntax. 
 // Created a variable to store the object in. 
 // Inside the curly braces are the key-value pair, which makes up one property. 
+
 let employee = {
     name : 'Sam',
     address: '11 Broadway St'
 }
+
+// Created a function, which non-destructively returns a modified object (e.g., employee). 
+// Syntax for returned modified object is return{...object, [key]:value};
 
 function updateEmployeeWithKeyAndValue(employee, key, value) {
     return{...employee, [key] : value};
@@ -12,6 +16,11 @@ function updateEmployeeWithKeyAndValue(employee, key, value) {
 
 // destructivelyUpdateEmployeeWithKeyAndValue(): this function should work the same as updateEmployeeWithKeyAndValue()
 // but it should mutate the employee Object passed in.
+// Syntax is below.
+// function function(object, key, value) {
+// object[key] = value;
+// return object;
+// }
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
     employee[key] = value;
